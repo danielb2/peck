@@ -7,10 +7,15 @@ Require multiple files in a directory
 Peck reads in a directory and transform all files into camelCase based on
 filename rules using proper underscores. hello_world.js becomes helloWorld.
 
+For a directory controllers containing a filename status.js among others:
 ``` javascript
 var Controllers = Peck(__dirname + '/controllers');
 
-hapiServer.route({ path: '/generate-categories/status', method: 'GET', config: Controllers.status });
+hapiServer.route({
+    path: '/generate-categories/status',
+    method: 'GET',
+    config: Controllers.status
+});
 ```
 
 #### Options
