@@ -6,10 +6,7 @@
   "scripts": {
     "test": "lab -v -t 100 -L"
   },
-  "repository": {
-    "type": "git",
-    "url": "notyet"
-  },
+  "repository": "git://github.com:danielb2/peck.git",
   "keywords": [
     "require"
   ],
