@@ -1,0 +1,26 @@
+{
+  "name": "peck",
+  "version": "1.0.0",
+  "description": "requires multiple modules",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "lab -v -t 100 -L"
+  },
+  "repository": {
+    "type": "git",
+    "url": "notyet"
+  },
+  "keywords": [
+    "require"
+  ],
+  "author": "Daniel Bretoi",
+  "license": "ISC",
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^5.18.1"
+  },
+  "dependencies": {
+    "inflection": "^1.7.1",
+    "joi": "^6.7.1"
+  }
+}
