@@ -1,6 +1,6 @@
 {
   "name": "peck",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "requires multiple modules",
   "main": "lib/index.js",
   "scripts": {
