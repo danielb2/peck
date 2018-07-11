@@ -17,6 +17,7 @@
     "lab": "^14.3.4"
   },
   "dependencies": {
+    "camelcase": "^5.0.0",
     "inflection": "^1.7.1",
     "joi": "^6.7.1"
   }

@@ -20,6 +20,7 @@ describe('peck', (done) => {
 
         expect(result.one).to.equal({ moo: 'cow' });
         expect(result.anotherFile).to.equal({ theAnswer: 42 });
+        expect(result.moreFiles).to.equal({ theQuestion: '?' });
 
         done();
     });
