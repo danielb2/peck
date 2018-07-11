@@ -25,6 +25,17 @@ describe('peck', (done) => {
         done();
     });
 
+    it('requires a directory recursivly', (done) => {
+
+        const result = Peck(__dirname + '/folder1');
+
+        expect(result.one).to.equal({ moo: 'cow' });
+        expect(result.anotherFile).to.equal({ theAnswer: 42 });
+        expect(result.nesTed.two).to.equal({ batman: 'who am I?' });
+
+        done();
+    });
+
     it('includes specific files using string', (done) => {
 
         const result = Peck(__dirname + '/folder1', { include: 'one.js' });
