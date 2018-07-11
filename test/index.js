@@ -1,63 +1,63 @@
-var Code = require('code');
-var Lab = require('lab');
-var Peck = require('../');
+'use strict';
+const Code = require('code');
+const Lab = require('lab');
+const Peck = require('../');
 
-var internals = {};
+const internals = {};
 
 // Test shortcuts
 
-var lab = exports.lab = Lab.script();
-var describe = lab.describe;
-var it = lab.it;
-var expect = Code.expect;
-var before = lab.before;
+const lab = exports.lab = Lab.script();
+const describe = lab.describe;
+const it = lab.it;
+const expect = Code.expect;
 
-describe('peck', function () {
+describe('peck', (done) => {
 
-    it('requires a directory', function (done) {
+    it('requires a directory', (done) => {
 
-        var result = Peck(__dirname + '/folder1');
+        const result = Peck(__dirname + '/folder1');
 
-        expect(result.one).to.deep.equal({ moo: 'cow' });
-        expect(result.anotherFile).to.deep.equal({ theAnswer: 42 });
+        expect(result.one).to.equal({ moo: 'cow' });
+        expect(result.anotherFile).to.equal({ theAnswer: 42 });
 
         done();
     });
 
-    it('includes specific files using string', function (done) {
+    it('includes specific files using string', (done) => {
 
-        var result = Peck(__dirname + '/folder1', { include: 'one.js' });
-        expect(result.one).to.deep.equal({ moo: 'cow' });
+        const result = Peck(__dirname + '/folder1', { include: 'one.js' });
+        expect(result.one).to.equal({ moo: 'cow' });
         expect(result.anotherFile).to.not.exist();
 
         done();
     });
 
-    it('includes specific files using array', function (done) {
+    it('includes specific files using array', (done) => {
 
-        var result = Peck(__dirname + '/folder1', { include: ['one.js'] });
-        expect(result.one).to.deep.equal({ moo: 'cow' });
+        const result = Peck(__dirname + '/folder1', { include: ['one.js'] });
+        expect(result.one).to.equal({ moo: 'cow' });
         expect(result.anotherFile).to.not.exist();
 
         done();
     });
 
-    it('excludes specific files using string', function (done) {
+    it('excludes specific files using string', (done) => {
 
-        var result = Peck(__dirname + '/folder1', { exclude: 'one.js' });
+        const result = Peck(__dirname + '/folder1', { exclude: 'one.js' });
 
         expect(result.one).to.not.exist();
-        expect(result.anotherFile).to.deep.equal({ theAnswer: 42 });
+        expect(result.anotherFile).to.equal({ theAnswer: 42 });
 
         done();
     });
 
-    it('excludes specific files using array', function (done) {
+    it('excludes specific files using array', (done) => {
 
-        var result = Peck(__dirname + '/folder1', { exclude: ['one.js'] });
+        const result = Peck(__dirname + '/folder1', { exclude: ['one.js'] });
 
         expect(result.one).to.not.exist();
-        expect(result.anotherFile).to.deep.equal({ theAnswer: 42 });
+        expect(result.anotherFile).to.equal({ theAnswer: 42 });
 
         done();
     });
