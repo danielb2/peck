@@ -5,7 +5,7 @@ Require multiple files in a directory
 ### Peck(dirname, [options])
 
 Peck reads in a directory and transform all files into camelCase based on
-filename rules using proper underscores. hello_world.js becomes helloWorld.
+filename rules using proper underscores. hello_world.js, and hello-world.js become helloWorld.
 
 For a directory controllers containing a filename status.js among others:
 ``` javascript
@@ -17,6 +17,13 @@ hapiServer.route({
     config: Controllers.status
 });
 ```
+
+note that if you have a structure such as `controllers/users/login.js` and
+`controllers/users.js` which has a module.exports.logout function, the
+respective objects will be merged to contain both a login and a logout function.
+If the users.js has `modules.exports = []` the array will completely be ignored
+since objects can't merge with arrays.
+
 
 #### Options
 

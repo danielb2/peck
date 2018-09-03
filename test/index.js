@@ -74,4 +74,13 @@ describe('peck', (done) => {
         done();
     });
 
+    it('includes folders and files with the same name and merges results', (done) => {
+
+        const controllers = Peck(__dirname + '/controllers');
+        expect(controllers.users.login()).to.equal('user logged in');
+        expect(controllers.users.logout()).to.equal('user logged out');
+
+        done();
+    });
+
 });
