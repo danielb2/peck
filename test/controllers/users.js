@@ -1,4 +1,5 @@
-module.exports.login = function() {
+'use strict';
+module.exports.login = function () {
 
     return 'user logged in';
 };
