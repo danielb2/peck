@@ -1,4 +1,4 @@
-## peck
+## peck [![Build Status](https://travis-ci.org/danielb2/peck.svg?branch=master)](https://travis-ci.org/danielb2/peck)
 
 Require multiple files in a directory
 
