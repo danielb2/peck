@@ -13,13 +13,13 @@
   "author": "Daniel Bretoi",
   "license": "ISC",
   "devDependencies": {
-    "code": "^4.1.0",
-    "lab": "^14.3.4"
+    "code": "^4.1.0"
   },
   "dependencies": {
     "camelcase": "^5.0.0",
     "inflection": "^1.7.1",
-    "joi": "^6.7.1",
-    "lodash": "^4.17.10"
+    "joi": "^14.3.1",
+    "lab": "^14.3.4",
+    "lodash": "^4.17.11"
   }
 }
