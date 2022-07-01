@@ -1,24 +1,26 @@
 {
-  "name": "peck",
-  "version": "4.0.0",
-  "description": "requires multiple modules",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "lab -a code -v -I TextEncoder,TextDecoder,queueMicrotask,WebAssembly,BigUint64Array,BigInt64Array,BigInt,URL,URLSearchParams -t 100 -m 30000 -r console -o coverage.log -r console -o stdout -r html -o coverage.html"
-  },
-  "repository": "git://github.com/danielb2/peck.git",
-  "keywords": [
-    "require"
-  ],
-  "author": "Daniel Bretoi",
-  "license": "ISC",
-  "devDependencies": {
-    "code": "4.x.x"
-  },
-  "dependencies": {
-    "camelcase": "6.x.x",
-    "inflection": "1.x.x",
-    "joi": "14.x.x",
-    "lab": "18.x.x"
-  }
+    "name": "peck",
+    "version": "4.0.1",
+    "description": "requires multiple modules",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "lab -v -t 100 -m 30000 -r console -o coverage.log -r console -o stdout -r html -o coverage.html"
+    },
+    "repository": "git://github.com/danielb2/peck.git",
+    "keywords": [
+        "require"
+    ],
+    "author": "Daniel Bretoi",
+    "license": "ISC",
+    "dependencies": {
+        "camelcase": "6.x.x",
+        "inflection": "1.x.x",
+        "joi": "17.x.x"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.18.2",
+        "@hapi/code": "^9.0.1",
+        "@hapi/lab": "^25.0.1",
+        "@hapi/eslint-plugin": "^6.0.0"
+    }
 }
