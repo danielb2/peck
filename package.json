@@ -13,14 +13,14 @@
   "author": "Daniel Bretoi",
   "license": "ISC",
   "dependencies": {
-    "@hapi/code": "^9.0.1",
-    "@hapi/lab": "^25.0.1",
     "camelcase": "6.x.x",
     "inflection": "1.x.x",
     "joi": "14.x.x"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
+    "@hapi/code": "^9.0.1",
+    "@hapi/lab": "^25.0.1",
     "@hapi/eslint-plugin": "^6.0.0"
   }
 }
