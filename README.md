@@ -18,7 +18,8 @@ console.log(Controllers); //  => { fooBar: require('foo/bar.js') }
 var Controllers = Peck(__dirname + "/controllers", {});
 console.log(Controllers); //  => { fooBar: require('foo/bar.js'), status: require('status.js') }
 
-var Controllers = Peck(__dirname + "/controllers", {
+// uses location of package.json as a starting path
+var Controllers = Peck("controllers", {
     exclude: "status.js",
 });
 console.log(Controllers); //  => { fooBar: require('foo/bar.js') }
